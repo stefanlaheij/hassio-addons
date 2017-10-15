@@ -1,0 +1,21 @@
+{
+  "name": "OpenSprinkler",
+  "version": "0.3",
+  "slug": "opensprinkler",
+  "description": "Run OpenSprinkler on your OpenSprinkler Pi (OSPi)",
+  "arch": [
+    "armhf"
+  ],
+  "startup": "services",
+  "webui": "http://[HOST]:[PORT:81]/",
+  "boot": "auto",
+  "ports": {
+    "8080/tcp": 81
+  },
+  "privileged": [
+    "SYS_RAWIO"
+  ],
+  "gpio": "yes",
+  "options": {},
+  "schema": {}
+}

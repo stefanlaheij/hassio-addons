@@ -1,0 +1,23 @@
+{
+  "name": "UniFi Controller",
+  "version": "0.94",
+  "slug": "unifi",
+  "description": "Controller software for Ubiquiti devices",
+  "arch": [
+    "armhf"
+  ],
+  "startup": "services",
+  "webui": "https://[HOST]:[PORT:8443]/",
+  "boot": "auto",
+  "ports": {
+    "6789/tcp": 6789,
+    "8080/tcp": 8080,
+    "8443/tcp": 8443,
+    "8880/tcp": 8880,
+    "8843/tcp": 8843,
+    "3478/udp": 3478
+  },
+  "host_network": "True",
+  "options": {},
+  "schema": {}
+}
