@@ -2,27 +2,27 @@
 #FROM $BUILD_FROM
 FROM resin/rpi-raspbian:latest
 
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv C0A52C50 && \
-    echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" \
-    > /etc/apt/sources.list.d/webupd8team-java.list && \
-    echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" \
-    >> /etc/apt/sources.list.d/webupd8team-java.list && \
-    apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886 && \
-    echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
+#RUN apt-key adv --keyserver keyserver.ubuntu.com --recv C0A52C50 && \
+#    echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" \
+#    > /etc/apt/sources.list.d/webupd8team-java.list && \
+#    echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" \
+#    >> /etc/apt/sources.list.d/webupd8team-java.list && \
+#    apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886 && \
+#    echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
 
 # Install java before unifi so a controller update doesn't force
 # a rebuild/redownload of java
-ENV JAVA_INSTALLER_VERSION 8u144-1~webupd8~0
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    oracle-java8-installer=${JAVA_INSTALLER_VERSION} \
-    oracle-java8-set-default \
-    && rm -rf /var/lib/apt/lists/* \
-    && rm -rf /var/cache/oracle-jdk8-installer
+#ENV JAVA_INSTALLER_VERSION 8u144-1~webupd8~0
+#RUN apt-get update && apt-get install -y --no-install-recommends \
+#    oracle-java8-installer=${JAVA_INSTALLER_VERSION} \
+#    oracle-java8-set-default \
+#    && rm -rf /var/lib/apt/lists/* \
+#    && rm -rf /var/cache/oracle-jdk8-installer
     
 RUN echo 'deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti' | sudo tee -a /etc/apt/sources.list.d/ubnt.list > /dev/null && \
     apt-key adv --keyserver keyserver.ubuntu.com --recv C0A52C50 && \
-    apt-get update     && \
-    apt-get install unifi -y && \
+    apt-get update && \
+    apt-get install wget unifi -y && \
     echo 'ENABLE_MONGODB=no' | sudo tee -a /etc/mongodb.conf > /dev/null
     
 RUN wget http://central.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.4-M3/snappy-java-1.1.4-M3.jar && \
