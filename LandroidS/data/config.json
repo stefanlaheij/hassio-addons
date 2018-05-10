@@ -1,0 +1,15 @@
+{
+    "http": {
+        "port": 3000
+    },
+    "landroid-s": {
+        "enable": true,
+        "email": "%%EMAIL%%",
+        "pwd": "%%PWD%%"
+    },
+    "mqtt": {
+        "enable": %%MQTTENABLED%%,
+        "url": "%%MQTTURL%%",
+        "topic": "landroid"
+    }
+}

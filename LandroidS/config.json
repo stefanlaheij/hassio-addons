@@ -1,0 +1,26 @@
+{
+  "name": "Worx Landroid S",
+  "version": "0.55",
+  "slug": "landroids",
+  "description": "Communication with Worx Landroid S robot mower",
+  "arch": [
+    "armhf"
+  ],
+  "startup": "services",
+  "boot": "auto",
+  "ports": {
+    "3000/tcp": 3000
+  },
+  "options": {
+    "email": "your@mail.com",
+    "pwd": "yourpassword",
+    "mqttenabled": false,
+    "mqtturl": "mqtt://username:apipassword@homeassistant"
+    },
+  "schema": {
+    "email": "email",
+    "pwd": "str",
+    "mqttenabled": "bool",
+    "mqtturl": "url?"
+  }
+}
