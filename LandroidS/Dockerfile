@@ -2,7 +2,6 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 RUN apk add --no-cache jq wget git nodejs nodejs-npm
-
 RUN mkdir -p /usr/src/landroid-bridge
 WORKDIR /usr/src/landroid-bridge
 
@@ -10,13 +9,19 @@ RUN cd /usr/src && \
     git clone https://github.com/weweave/landroid-bridge.git && \
     cd /usr/src/landroid-bridge
 
-COPY data/config.json /usr/src/landroid-bridge/config.json
+RUN apk --no-cache --virtual build-dependencies add \
+    python \
+    make \
+    g++ \
+    && npm install \
+    && apk del build-dependencies
 
-RUN npm install && \
-    npm run build-prod
+RUN npm run build-prod
 
 COPY run.sh /
 RUN chmod a+x /run.sh
+
+COPY config_template.json /usr/src/landroid-bridge/config.json
 
 EXPOSE 3000
 CMD [ "/run.sh" ]
