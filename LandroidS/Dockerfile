@@ -23,5 +23,7 @@ RUN chmod a+x /run.sh
 
 COPY config_template.json /usr/src/landroid-bridge/config.json
 
+VOLUME /data
+
 EXPOSE 3000
 CMD [ "/run.sh" ]

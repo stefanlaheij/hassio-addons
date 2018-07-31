@@ -1,6 +1,6 @@
 {
   "name": "Worx Landroid S",
-  "version": "0.55",
+  "version": "0.62",
   "slug": "landroids",
   "description": "Communication with Worx Landroid S robot mower",
   "arch": [
