@@ -4,7 +4,9 @@
   "slug": "landroids",
   "description": "Communication with Worx Landroid S robot mower",
   "arch": [
-    "armhf"
+    "armhf",
+    "amd64", 
+    "i386"],
   ],
   "startup": "services",
   "boot": "auto",
