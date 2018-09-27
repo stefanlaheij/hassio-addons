@@ -11,7 +11,7 @@ RUN apk --no-cache add \
       g++ \
       unzip \
       wget
-RUN wget https://github.com/OpenSprinkler/OpenSprinkler-Firmware/archive/master.zip && \
+RUN wget https://github.com/OpenSprinkler/OpenSprinkler-Firmware/archive/218.zip && \
     unzip master.zip && \
     cd /OpenSprinkler-Firmware-master && \
     ./build.sh -s ospi
