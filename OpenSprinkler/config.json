@@ -1,6 +1,6 @@
 {
   "name": "OpenSprinkler",
-  "version": "0.3",
+  "version": "0.4",
   "slug": "opensprinkler",
   "description": "Run the OpenSprinkler Pi (OSPi) firmware on top of Hass.io",
   "arch": [
