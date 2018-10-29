@@ -7,10 +7,10 @@
     "armhf"
   ],
   "startup": "services",
-  "webui": "http://[HOST]:[PORT:81]/",
+  "webui": "http://[HOST]:[PORT:8080]/",
   "boot": "auto",
   "ports": {
-    "8080/tcp": 81
+    "8080/tcp": 8080
   },
   "privileged": [
     "SYS_RAWIO"
