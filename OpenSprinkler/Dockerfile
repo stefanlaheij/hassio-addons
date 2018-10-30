@@ -5,22 +5,17 @@ ENV LANG C.UTF-8
 
 ########################################
 FROM base-img as build-img
-RUN apk --no-cache add \
-      git \
-      bash \
-      ca-certificates \
-      g++ \
-      unzip \
-      wget
+
+RUN apk --no-cache add git  bash ca-certificates g++
+
 RUN git clone https://github.com/OpenSprinkler/OpenSprinkler-Firmware.git && \
     cd OpenSprinkler-Firmware && \
     ./build.sh -s ospi
 
 ########################################
 FROM base-img
-RUN apk --no-cache add \
-      libstdc++ \
-    && \
+
+RUN apk --no-cache add  libstdc++ && \
     mkdir /OpenSprinkler && \
     mkdir -p /data/logs && \
     cd /OpenSprinkler && \
@@ -28,6 +23,7 @@ RUN apk --no-cache add \
     ln -s /data/nvm.dat && \
     ln -s /data/ifkey.txt && \
     ln -s /data/logs
+
 COPY --from=build-img /OpenSprinkler-Firmware/OpenSprinkler /OpenSprinkler/OpenSprinkler
 WORKDIR /OpenSprinkler
 
