@@ -1,6 +1,6 @@
 {
   "name": "Worx Landroid S",
-  "version": "0.68",
+  "version": "0.69",
   "slug": "landroids",
   "description": "Communication with Worx Landroid S robot mower",
   "arch": [
@@ -27,7 +27,8 @@
     "loglevel": "info",
     "scheduler_enabled": false,
     "cron": false,
-    "wunderground_apikey": "YOUR_API_KEY",
+    "weather_provider": "darksky",
+    "apikey": "YOUR_API_KEY",
     "latitude": 50.0982164,
     "longitude": 8.221404,
     "earliest_start": 11,
@@ -51,7 +52,8 @@
     "loglevel": "str",
     "scheduler_enabled": "bool",
     "cron": "bool",
-    "wunderground_apikey": "str",
+    "weather_provider": "str",
+    "apikey": "str",
     "latitude": "float",
     "longitude": "float",
     "earliest_start": "int",
