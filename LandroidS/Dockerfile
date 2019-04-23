@@ -3,7 +3,6 @@ FROM $BUILD_FROM
 
 RUN apk add --no-cache jq wget git nodejs nodejs-npm
 RUN mkdir -p /usr/src/landroid-bridge
-WORKDIR /usr/src/landroid-bridge
 
 RUN cd /usr/src && \
     git clone https://github.com/weweave/landroid-bridge.git && \
@@ -25,5 +24,8 @@ COPY config_template.json /usr/src/landroid-bridge/config.json
 
 VOLUME /data
 
+WORKDIR /data
+
 EXPOSE 3000
+
 CMD [ "/run.sh" ]
