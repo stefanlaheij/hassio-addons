@@ -15,4 +15,4 @@ sed -i "s|%%MQTTENABLED%%|$MQTTENABLED|g" /usr/src/landroid-bridge/config.json
 sed -i "s|%%MQTTURL%%|$MQTTURL|g" /usr/src/landroid-bridge/config.json
 
 # start server
-exec node /usr/src/landroid-bridge/dist/server.js
+exec node dist/server.js
