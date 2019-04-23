@@ -23,7 +23,7 @@
             "latitude": 50.0982164,
             "longitude": 8.221404
         },
-        "db": "/data/scheduler.db",
+        "db": "../../../data/scheduler.db",
         "earliestStart": 11,
         "latestStop": 21,
         "startEarly": false,
