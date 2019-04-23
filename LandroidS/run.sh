@@ -11,7 +11,8 @@ MQTTTOPIC=$(jq --raw-output ".mqtttopic" $CONFIG_PATH)
 LOGLEVEL=$(jq --raw-output ".loglevel" $CONFIG_PATH)
 SCHEDULERENABLED=$(jq --raw-output ".scheduler_enabled" $CONFIG_PATH)
 CRON=$(jq --raw-output ".cron" $CONFIG_PATH)
-WUNDERGROUNDAPIKEY=$(jq --raw-output ".wunderground_apikey" $CONFIG_PATH)
+WEATHERPROVIDER=$(jq --raw-output ".weather_provider" $CONFIG_PATH)
+APIKEY=$(jq --raw-output ".wunderground_apikey" $CONFIG_PATH)
 LATITUDE=$(jq --raw-output ".latitude" $CONFIG_PATH)
 LONGITUDE=$(jq --raw-output ".longitude" $CONFIG_PATH)
 EARLIESTSTART=$(jq --raw-output ".earliest_start" $CONFIG_PATH)
@@ -35,7 +36,8 @@ sed -i "s|%%MQTTTOPIC%%|$MQTTTOPIC|g" /usr/src/landroid-bridge/config.json
 sed -i "s|%%LOGLEVEL%%|$LOGLEVEL|g" /usr/src/landroid-bridge/config.json
 sed -i "s|%%SCHEDULERENABLED%%|$SCHEDULERENABLED|g" /usr/src/landroid-bridge/config.json
 sed -i "s|%%CRON%%|$CRON|g" /usr/src/landroid-bridge/config.json
-sed -i "s|%%WUNDERGROUNDAPIKEY%%|$WUNDERGROUNDAPIKEY|g" /usr/src/landroid-bridge/config.json
+sed -i "s|%%WEATHERPROVIDER%%|$WEATHERPROVIDER|g" /usr/src/landroid-bridge/config.json
+sed -i "s|%%APIKEY%%|$APIKEY|g" /usr/src/landroid-bridge/config.json
 sed -i "s|%%LATITUDE%%|$LATITUDE|g" /usr/src/landroid-bridge/config.json
 sed -i "s|%%LONGITUDE%%|$LONGITUDE|g" /usr/src/landroid-bridge/config.json
 sed -i "s|%%EARLIESTSTART%%|$EARLIESTSTART|g" /usr/src/landroid-bridge/config.json
