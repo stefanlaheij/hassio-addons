@@ -16,7 +16,7 @@
     "3000/tcp": null
   },
   "ports_description": {
-    "3000/tcp": "Worx Landroid S (Not required for Hass.io Ingress)"
+    "3000/tcp": "(Not required for Hass.io Ingress)"
   },
   "options": {
     "email": "your@mail.com",
