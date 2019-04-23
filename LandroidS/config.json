@@ -1,6 +1,6 @@
 {
   "name": "Worx Landroid S",
-  "version": "0.66",
+  "version": "0.67",
   "slug": "landroids",
   "description": "Communication with Worx Landroid S robot mower",
   "arch": [
@@ -22,12 +22,48 @@
     "email": "your@mail.com",
     "pwd": "yourpassword",
     "mqttenabled": false,
-    "mqtturl": "mqtt://username:apipassword@homeassistant"
+    "mqtturl": "mqtt://username:apipassword@homeassistant",
+    "mqtttopic": "landroid",
+    "loglevel": "info",
+    "scheduler_enabled": "false",
+    "cron": "false",
+    "wunderground_apikey": "YOUR_API_KEY",
+    "latitude": 50.0982164,
+    "longitude": 8.221404,
+    "earliest_start": 11,
+    "latest_stop": 21,
+    "start_early": false,
+    "off_days": 2,
+    "square_meters": 300,
+    "per_hour": 50,
+    "mow_time": 75,
+    "charge_time": 75,
+    "days_for_total_cut": 2,
+    "rain_delay": 120,
+    "threshold": 30
     },
   "schema": {
     "email": "email",
     "pwd": "str",
     "mqttenabled": "bool",
-    "mqtturl": "url?"
+    "mqtturl": "url?",
+    "mqtttopic": "str?",
+    "loglevel": "str",
+    "scheduler_enabled": "bool",
+    "cron": "bool",
+    "wunderground_apikey": "str",
+    "latitude": "float",
+    "longitude": "float",
+    "earliest_start": "int",
+    "latest_stop": "int",
+    "start_early": "bool",
+    "off_days": "int",
+    "square_meters": "int",
+    "per_hour": "int",
+    "mow_time": "int",
+    "charge_time": "int",
+    "days_for_total_cut": "int",
+    "rain_delay": "int",
+    "threshold": "int"    
   }
 }
