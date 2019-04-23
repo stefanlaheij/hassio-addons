@@ -15,7 +15,7 @@
     },
     "logLevel": "debug",
     "scheduler": {
-        "enable": true,
+        "enable": false,
         "cron": false,
         "weather": {
             "provider": "wunderground",
