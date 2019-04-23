@@ -18,8 +18,8 @@
         "enable": %%SCHEDULERENABLED%%,
         "cron": %%CRON%%,
         "weather": {
-            "provider": "wunderground",
-            "apiKey": "%%WUNDERGROUNDAPIKEY%%",
+            "provider": "%%WEATHERPROVIDER%%",
+            "apiKey": "%%APIKEY%%",
             "latitude": %%LATITUDE%%,
             "longitude": %%LONGITUDE%%
         },
