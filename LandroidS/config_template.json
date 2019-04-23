@@ -11,29 +11,29 @@
     "mqtt": {
         "enable": %%MQTTENABLED%%,
         "url": "%%MQTTURL%%",
-        "topic": "landroid"
+        "topic": "%%MQTTTOPIC%%"
     },
-    "logLevel": "debug",
+    "logLevel": "%%LOGLEVEL%%",
     "scheduler": {
-        "enable": false,
-        "cron": false,
+        "enable": %%SCHEDULERENABLED%%,
+        "cron": %%CRON%%,
         "weather": {
             "provider": "wunderground",
-            "apiKey": "YOUR_API_KEY",
-            "latitude": 50.0982164,
-            "longitude": 8.221404
+            "apiKey": "%%WUNDERGROUNDAPIKEY%%",
+            "latitude": %%LATITUDE%%,
+            "longitude": %%LONGITUDE%%
         },
         "db": "../../../data/scheduler.db",
-        "earliestStart": 11,
-        "latestStop": 21,
-        "startEarly": false,
-        "offDays": 2,
-        "squareMeters": 300,
-        "perHour": 50,
-        "mowTime": 75,
-        "chargeTime": 75,
-        "daysForTotalCut": 2,
-        "rainDelay": 120,
-        "threshold": 30
+        "earliestStart": %%EARLIESTSTART%%,
+        "latestStop": %%LATESTSTOP%%,
+        "startEarly": %%STARTEARLY%%,
+        "offDays": %%OFFDAYS%%,
+        "squareMeters": %%SQUAREMETERS%%,
+        "perHour": %%PERHOUR%%,
+        "mowTime": %%MOWTIME%%,
+        "chargeTime": %%CHARGETIME%%,
+        "daysForTotalCut": %%DAYSFORTOTALCUT%%,
+        "rainDelay": %%RAINDELAY%%,
+        "threshold": %%THRESHOLD%%
     }
 }
