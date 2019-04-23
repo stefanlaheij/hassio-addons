@@ -1,6 +1,6 @@
 {
   "name": "Worx Landroid S",
-  "version": "0.63",
+  "version": "0.64",
   "slug": "landroids",
   "description": "Communication with Worx Landroid S robot mower",
   "arch": [
@@ -10,8 +10,13 @@
   ],
   "startup": "services",
   "boot": "auto",
+  "ingress": true,
+  "ingress_port": 3000,
   "ports": {
-    "3000/tcp": 3000
+    "3000/tcp": null
+  },
+  "ports_description": {
+    "3000/tcp": "Worx Landroid S (Not required for Hass.io Ingress)"
   },
   "options": {
     "email": "your@mail.com",
