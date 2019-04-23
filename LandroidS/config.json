@@ -3,6 +3,7 @@
   "version": "0.70",
   "slug": "landroids",
   "description": "Communication with Worx Landroid S robot mower",
+  "url": "https://github.com/weweave/landroid-bridge",
   "arch": [
     "armhf",
     "amd64", 
