@@ -24,7 +24,6 @@ RUN chmod a+x /run.sh
 COPY config_template.json /usr/src/landroid-bridge/config.json
 
 VOLUME /data
-WORKDIR /data
 
 EXPOSE 3000
 
