@@ -1,9 +1,9 @@
 {
   "name": "Worx Landroid S",
-  "version": "0.70",
+  "version": "0.71",
   "slug": "landroids",
   "description": "Communication with Worx Landroid S robot mower",
-  "url": "https://github.com/weweave/landroid-bridge",
+  "url": "https://github.com/virtualzone/landroid-bridge",
   "arch": [
     "armhf",
     "amd64", 
