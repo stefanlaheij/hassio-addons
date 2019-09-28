@@ -13,10 +13,13 @@ RUN apk --no-cache --virtual build-dependencies add \
     python \
     make \
     g++ \
-    && npm install \
-    && apk del build-dependencies
+    && npm install
 
-RUN npm run build-prod
+RUN npm run clean
+RUN npm run grunt
+RUN npm prune --production
+
+RUN apk del build-dependencies
 
 COPY run.sh /
 RUN chmod a+x /run.sh
