@@ -1,6 +1,6 @@
 {
   "name": "Worx Landroid S",
-  "version": "0.71",
+  "version": "0.72",
   "slug": "landroids",
   "description": "Communication with Worx Landroid S robot mower",
   "url": "https://github.com/virtualzone/landroid-bridge",
