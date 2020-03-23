@@ -6,7 +6,7 @@ RUN mkdir -p /usr/src/landroid-bridge
 WORKDIR /usr/src/landroid-bridge
 
 RUN cd /usr/src && \
-    git clone https://github.com/virtualzone/landroid-bridge.git && \
+    git clone https://github.com/stefanlaheij/landroid-bridge.git && \
     cd /usr/src/landroid-bridge
 
 RUN apk --no-cache --virtual build-dependencies add \
